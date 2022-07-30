@@ -1,0 +1,10 @@
+env: {
+  "BASE_URL": "http://localhost:3000",
+  "MONGODB_URL": "mongodb://admin:admin@cluster0-shard-00-00.vhse4.mongodb.net:27017,cluster0-shard-00-01.vhse4.mongodb.net:27017,cluster0-shard-00-02.vhse4.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-ld8a7j-shard-0&authSource=admin&retryWrites=true&w=majority",
+  "ACCESS_TOKEN_SECRET": "Y86AVa6rN4DdCTQ5SQvQEHBU2d4WWStd4TxYuzR4ATjL7f7qc",
+  "REFRESH_TOKEN_SECRET": "2wXEw8hngkmVyC8yLgDcFQCq99x4YDqStRzY5tmMCj6B2bsvPqFYPNp2uVJ8tzHy76kYdXXPZQH2Rx",
+  "PAYPAL_CLIENT_ID": "AZMR5VL8-lLrLnz84tk9zjBiRClTG4yYFnllai2HmjRpm4TUytTi2eNX8EtPJYGehglO_q2qWPM9ba6b",
+  "CLOUD_UPDATE_PRESET": "",
+  "CLOUD_NAME": "",
+  "CLOUD_API": ""
+}
