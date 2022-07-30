@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3000"
+const baseUrl = "https://jenderal-buah.netlify.app"
 
 export const getData = async (url, token) => {
     const res = await fetch(`${baseUrl}/api/${url}`, {
