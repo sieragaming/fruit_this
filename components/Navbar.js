@@ -35,32 +35,50 @@ function Navbar() {
                 <Link href="/categories">
                     <a className="dropdown-item"><i className="fas fa-list mr-2"></i>Kategori</a>
                 </Link>
+                <li className='nav-item'>
+                    <Link href="/pesanan">
+                        <a className={"nav-link" + isActive('/pesanan')}>
+                            <span className="mr-2 pr-1">
+                                Pesanan
+                            </span>
+                        </a>
+                    </Link>
+                </li>
             </>
         )
     }
 
     const loggedRouter = () => {
         return (
-            <li className="nav-item dropdown">
-                <a className="nav-link active dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src={auth.user.avatar} alt={auth.user.avatar} className="image"
-                        style={{
-                            borderRadius: '50%', width: '30px', height: '30px',
-                            transform: 'translateY(-3px)', marginRight: '3px'
-                        }} /> {auth.user.name}
-                </a>
-
-                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <Link href="/profile">
-                        <a className="dropdown-item"><i className="fas fa-user mr-2"></i>Profil</a>
+            <>
+                <li className='nav-item'>
+                    <Link href="/pesanan">
+                        <a className={"nav-link" + isActive('/pesanan')}>
+                            <span className="mr-2 pr-1">
+                                Pesanan
+                            </span>
+                        </a>
                     </Link>
-                    {
-                        auth.user.role === 'admin' && adminRouter()
-                    }
-                    <div className="dropdown-divider"></div>
-                    <button className="dropdown-item" onClick={handleLogout}><i className="fas fa-right-from-bracket mr-2"></i>Keluar</button>
-                </div>
-            </li>
+                </li>
+                <li className="nav-item dropdown">
+                    <a className="nav-link active dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src={auth.user.avatar} alt={auth.user.avatar} className="image"
+                            style={{
+                                borderRadius: '50%', width: '30px', height: '30px',
+                                transform: 'translateY(-3px)', marginRight: '3px'
+                            }} /> {auth.user.name}
+                    </a>
+
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <Link href="/profile">
+                            <a className="dropdown-item"><i className="fas fa-user mr-2"></i>Profil</a>
+                        </Link>
+                        {auth.user.role === 'admin' && adminRouter()}
+                        <div className="dropdown-divider"></div>
+                        <button className="dropdown-item" onClick={handleLogout}><i className="fas fa-right-from-bracket mr-2"></i>Keluar</button>
+                    </div>
+                </li>
+            </>
         )
     }
 
